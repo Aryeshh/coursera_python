@@ -5,7 +5,7 @@ Hint: make sure not to include the lines that start with 'From:'. Also look at t
 
 fname = input("Enter file name: ")
 if len(fname) < 1:
-    fname = "mbox-short.txt"
+    fname = "coursera_python\mbox-short.txt"
 
 fh = open(fname)
 count = 0
