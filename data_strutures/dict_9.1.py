@@ -11,8 +11,12 @@ for line in handle:
     if not line.startswith('From '):
         continue
     words = line.split()
-    counts[words[1]] = counts.get(words[1],0) + 1  # call me to understand what i did here
+    #counts[words[1]] = counts.get(words[1],0) + 1  # call me to understand what i did here
     
+    
+    for word in words:
+        counts[word]= counts.get(word,0) + 1
+        
     
 
 print(max(counts, key=counts.get), max(counts.values())) 
