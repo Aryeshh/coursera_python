@@ -11,10 +11,11 @@ for line in handle:
     if not line.startswith('From '):
         continue
     words = line.split()
-    counts[words[1]] = counts.get(words[1],1) + 1  # call me to understand what i did here
+    counts[words[1]] = counts.get(words[1],0) + 1  # call me to understand what i did here
+    
     
 # here i brute forced 5 to match the output of the given code in the autograder bcoz in actual the correct value is 6.
-print(max(counts, key=counts.get), '5') # print(max(counts, key=counts.get), max(counts.value())) should be the right code
+print(max(counts, key=counts.get), max(counts.value())) 
 
 '''         or       '''
 
