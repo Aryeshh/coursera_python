@@ -11,26 +11,21 @@ for line in handle:
     if not line.startswith('From '):
         continue
     words = line.split()
-    #counts[words[1]] = counts.get(words[1],0) + 1  # call me to understand what i did here
+    counts[words[1]] = counts.get(words[1],0) + 1  # call me to understand what i did here
     
-    
-    for word in words:
-        counts[word]= counts.get(word,0) + 1
-        
     
 
-print(max(counts, key=counts.get), max(counts.values())) 
+#print(max(counts, key=counts.get), max(counts.values())) 
 
 '''         or       '''
 
-# this code is correct but the answer will not match the autograder it'll give 6 instead of 5 so tweak it accordingly
-# largest = None
-# email = None
-# for name,count in counts.items():
-#     if largest is None or count > largest:             
-#         largest = count
-#         email = name
-# print(email, largest)
+largest = None
+email = None
+for name,count in counts.items():
+    if largest is None or count > largest:             
+        largest = count
+        email = name
+print(email, largest)
 
 
 
